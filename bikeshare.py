@@ -121,16 +121,16 @@ def station_stats(df):
 
 
     popular_start_station = df['Start Station'].mode()[0]
-    print('Most popular start station:', popular_start_station)
+    print('Most popular start station is {}'.format(popular_start_station))
 
 
     popular_end_station = df['End Station'].mode()[0]
-    print('Most popular end station:', popular_end_station)
+    print('Most popular end station is {}'.format(popular_end_station))
 
 
     df['Start_End_Station_Combination'] = df['Start Station'] + '-' + df['End Station']
     common_combination = df['Start_End_Station_Combination'].mode()[0]
-    print('Most popular Start End Station combination:', common_combination)
+    print('Most popular Start End Station combination is {}'.format(common_combination))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
