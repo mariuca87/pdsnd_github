@@ -99,16 +99,16 @@ def time_stats(df):
 
 
     popular_month = df['month'].mode()[0]
-    print('Most popular month:', calendar.month_name[popular_month])
+    print('Most popular month is {}'.format(calendar.month_name[popular_month]))
 
 
     popular_day_of_week = df['day_of_week'].mode()[0]
-    print('Most popular day of the week:', popular_day_of_week)
+    print('Most popular day of the week is {}'.format(popular_day_of_week))
 
 
     df['hour'] = df['Start time'].dt.hour
     popular_start_hour = df['hour'].mode()[0]
-    print('Most popular start hour:', popular_start_hour)
+    print('Most popular start hour is {}'.format(popular_start_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -121,16 +121,16 @@ def station_stats(df):
 
 
     popular_start_station = df['Start Station'].mode()[0]
-    print('Most popular start station:', popular_start_station)
+    print('Most popular start station is {}'.format(popular_start_station))
 
 
     popular_end_station = df['End Station'].mode()[0]
-    print('Most popular end station:', popular_end_station)
+    print('Most popular end station is {}'.format(popular_end_station))
 
 
     df['Start_End_Station_Combination'] = df['Start Station'] + '-' + df['End Station']
     common_combination = df['Start_End_Station_Combination'].mode()[0]
-    print('Most popular Start End Station combination:', common_combination)
+    print('Most popular Start End Station combination is {}'.format(common_combination))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
