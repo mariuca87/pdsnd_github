@@ -7,7 +7,7 @@
 Bikeshare.py
 
 ### Description
-Describe what your project is about and what it does
+Project shares a code for bikeshare users to visualise usage stats filtered by city, month, day of the week
 
 ### Files used
 Include the files used
